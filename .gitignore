@@ -1,8 +1,28 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Vercel
 .vercel
+build-info.json
 
-# Local Claude Code preview/dev config
-.claude/
+# Env
+.env
+.env.local
+.env.production
 
-# OS / editor cruft
+# System / editor
 .DS_Store
-Thumbs.db
+*.log
+*.swp
+
+# Stray binaries / downloads (never commit large installers)
+*.dmg
+*.pdf
+*.zip
+*.iso
