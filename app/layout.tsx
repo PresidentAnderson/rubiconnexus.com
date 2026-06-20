@@ -4,6 +4,7 @@ import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ScrollReveal from "@/components/ScrollReveal";
+import UpdateNotifier from "@/components/UpdateNotifier";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -51,6 +52,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <SiteFooter />
         <ScrollReveal />
+        <UpdateNotifier
+          loadedCommit={process.env.NEXT_PUBLIC_COMMIT_SHA ?? process.env.COMMIT_SHA ?? "local-dev"}
+          locale="en"
+        />
       </body>
     </html>
   );
